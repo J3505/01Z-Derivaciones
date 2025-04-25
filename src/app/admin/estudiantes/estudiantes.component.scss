@@ -1,0 +1,31 @@
+.boton1,
+.boton2 {
+    width: 200px;
+    height: 44px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px 0;
+  }
+
+  .boton1 {
+    background: rgb(45, 42, 221);
+    position: relative;
+    top: 20px;
+  }
+  
+  .boton1:hover {
+    background: rgb(57, 55, 226);
+  }
+
+.boton2 {
+    background: rgb(240, 19, 19);
+    position: relative;
+    top: 20px;
+  }
+  
+  .boton2:hover {
+    background: rgb(236, 60, 60);
+  }
