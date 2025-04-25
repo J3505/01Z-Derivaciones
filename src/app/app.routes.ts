@@ -11,6 +11,7 @@ export const routes: Routes = [
   },
   {
     path: 'admin',
+    loadComponent: ()=>import('./layout/admin/layout-admin/layout-admin.component'),
     children: ADMIN_ROUTES,
   },
   {
