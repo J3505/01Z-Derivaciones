@@ -1,0 +1,49 @@
+.boton1,
+.boton2 {
+    width: 200px;
+    height: 44px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px 0;
+  }
+
+.boton3{
+    width: 150px;
+    height: 44px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px 0;
+    position: relative;
+    top: 30px;
+    
+}
+
+  .boton1 {
+    background: rgb(20, 194, 20);
+  }
+  
+  .boton1:hover {
+    background: rgb(75, 219, 75);
+  }
+  
+  .boton2 {
+    background: rgb(45, 42, 221);
+  }
+  
+  .boton2:hover {
+    background: rgb(57, 55, 226);
+  }
+
+  .boton3 {
+    background: rgb(45, 42, 221);
+  }
+  
+  .boton3:hover {
+    background: rgb(57, 55, 226);
+  }
