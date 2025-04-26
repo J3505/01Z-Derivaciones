@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
+import { HeaderProfesorComponent } from "../header-profesor/header-profesor.component";
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-layout-profesor',
-  imports: [],
+  imports: [HeaderProfesorComponent, RouterOutlet],
   templateUrl: './layout-profesor.component.html',
   styleUrl: './layout-profesor.component.scss'
 })
-export class LayoutProfesorComponent {
+export default class LayoutProfesorComponent {
 
 }

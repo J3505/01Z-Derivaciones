@@ -1,1 +1,303 @@
-<p>estudiantes works!</p>
+<div class="max-w-7xl mx-auto">
+  <!-- Encabezado -->
+  <div
+    class="bg-white backdrop-blur-sm rounded-2xl p-6 mb-8 border border-gray-300"
+  >
+    <div
+      class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4"
+    >
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 text-sm">
+        <div class="bg-gray-100 rounded-lg px-4 py-2">
+          <span class="text-gray-600">Período:</span>
+          <!-- <p class="font-medium">{{ periodo }}</p> -->
+        </div>
+
+        <div class="bg-gray-100 rounded-lg px-4 py-2">
+          <span class="text-gray-600">Curso:</span>
+          <!-- <p class="font-medium">{{ curso }}</p> -->
+        </div>
+
+        <div class="bg-gray-100 rounded-lg px-4 py-2">
+          <span class="text-gray-600">CFP:</span>
+          <!-- <p class="font-medium">{{ cfp }}</p> -->
+        </div>
+
+        <div class="bg-gray-100 rounded-lg px-4 py-2">
+          <span class="text-gray-600">Semestre:</span>
+          <!-- <p class="font-medium">{{ semestre }}</p> -->
+        </div>
+
+        <div class="bg-gray-100 rounded-lg px-4 py-2">
+          <span class="text-gray-600">Carrera:</span>
+          <!-- <p class="font-medium"> {{ carrera }}</p> -->
+        </div>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
+        <!-- Boton Modal -->
+        <p-button (click)="showDialog()" label="Agregar estudiantes" />
+
+        <!-- <button (click)="openModal()"  class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2.5 rounded-xl transition-all duration-200 flex items-center justify-center gap-2 flex-1 sm:flex-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 5v14M5 12h14"/>
+          </svg>
+          Agregar estudiantes
+      </button> -->
+        <!-- (click)="searchEstudiante()"  -->
+        <button
+          class="bg-gray-700 hover:bg-gray-600 text-white px-6 py-2.5 rounded-xl transition-all duration-200 flex items-center justify-center gap-2 flex-1 sm:flex-none"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-5 h-5"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="11" cy="11" r="8" />
+            <path d="m21 21-4.3-4.3" />
+          </svg>
+          Buscar estudiante
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal de estudian -->
+  <p-dialog
+    header="Agregar Estudiantes"
+    [(visible)]="visible"
+    [modal]="true"
+    [(visible)]="visible"
+    class="bg-white rounded-xl shadow-lg w-full max-w-3xl mx-2 uppercase overflow-y-auto max-h-[600px]"
+  >
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+      <!-- Left Column -->
+      <div class="space-y-2">
+        <button
+          type="button"
+          (click)="importFromExcel()"
+          class="w-full bg-green-600 text-white py-2 px-4 rounded hover:bg-green-700 transition-all"
+          class="w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-all"
+        >
+          Importar excel
+        </button>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1"
+            >Nombre del estudiante:</label
+          >
+          <input
+            type="text"
+            class="w-full p-2 border rounded focus:ring-2 focus:ring-blue-500"
+          />
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1"
+            >Apellido del estudiante</label
+          >
+          <input
+            type="text"
+            class="w-full p-2 border rounded focus:ring-2 focus:ring-blue-500"
+          />
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1"
+            >Teléfono:</label
+          >
+          <input
+            type="tel"
+            class="w-full p-2 border rounded focus:ring-2 focus:ring-blue-500"
+          />
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1"
+            >Correo:</label
+          >
+          <input
+            type="email"
+            class="w-full p-2 border rounded focus:ring-2 focus:ring-blue-500"
+          />
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div class="space-y-2">
+        <div
+          class="border-2 border-dashed border-gray-300 rounded-lg p-4 text-center"
+        >
+          <p class="text-gray-500 mb-2">Imagen del estudiante</p>
+          <button
+            class="bg-gray-100 text-gray-700 py-2 px-4 rounded hover:bg-gray-200 transition-all"
+          >
+            Subir imagen
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Section with Pink Background -->
+    <div class="mt-6 bg-pink-50 p-2 rounded-lg">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1"
+            >Período:</label
+          >
+          <input
+            type="text"
+            value="2025-10"
+            class="w-full p-2 border rounded bg-white"
+          />
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1"
+            >Curso:</label
+          >
+          <input
+            type="text"
+            value="Seminario"
+            class="w-full p-2 border rounded bg-white"
+          />
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1"
+            >Carrera:</label
+          >
+          <input
+            type="text"
+            value="Gastronomia"
+            class="w-full p-2 border rounded bg-white"
+          />
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1"
+            >CFP</label
+          >
+          <input
+            type="text"
+            value="Ayacucho"
+            class="w-full p-2 border rounded bg-white"
+          />
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1"
+            >Semestre:</label
+          >
+          <input
+            type="text"
+            value="V"
+            class="w-full p-2 border rounded bg-white"
+          />
+        </div>
+        <div class="flex flex-col justify-end sm:flex-row gap-2 pt-2">
+          <button
+            type="button"
+            (click)="closeModal()"
+            class="bg-gray-200 text-gray-800 p-2 rounded-lg hover:bg-gray-300 transition-all flex-1"
+          >
+            Cancelar
+          </button>
+          <button
+            type="submit"
+            class="bg-green-600 text-white p-2 rounded-lg hover:bg-green-700 transition-all flex-1 flex items-center justify-center gap-2"
+          >
+            <i class="fas fa-save"></i>
+            <span>Guardar</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </p-dialog>
+
+  <!-- Lista de estudiantes -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    @for (estudiante of estudiantes; track $index) {
+    <div
+      class="bg-white backdrop-blur-sm border border-gray-300 rounded-2xl p-6 hover:bg-gray-100 transition-all duration-300 shadow"
+    >
+      <div class="flex items-center gap-6">
+        <div class="relative">
+          <img
+            [src]="
+              estudiante.foto ||
+              'https://i.pinimg.com/736x/3f/4d/cc/3f4dcc6b825a491576315b7adaa41c4b.jpg'
+            "
+            alt="Foto de {{ estudiante.nombre }}"
+            class="w-24 h-24 object-cover rounded-xl ring-2 ring-gray-300"
+          />
+
+          <div
+            class="absolute -bottom-1 -right-1 w-5 h-5 bg-green-500 rounded-full border-2 border-white"
+          ></div>
+        </div>
+        <div class="flex-1">
+          <h3 class="text-lg font-semibold">
+            {{ estudiante.nombre }} {{ estudiante.apellido }}
+          </h3>
+          <p class="text-gray-600 text-sm">ID: {{ estudiante.id }}</p>
+        </div>
+      </div>
+      <div class="mt-4 space-y-2 text-sm">
+        <p class="flex items-center gap-2 text-gray-700">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-4 h-4"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+            />
+          </svg>
+          {{ estudiante.telefono }}
+        </p>
+        <p class="flex items-center gap-2 text-gray-700">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-4 h-4"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+            />
+            <polyline points="22,6 12,13 2,6" />
+          </svg>
+          {{ estudiante.correo }}
+        </p>
+      </div>
+      <div class="mt-6">
+        <!-- [routerLink]="['/profesor/derivaciones', estudiante.id]" -->
+        <a
+          class="w-full bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-xl transition-all duration-200 flex items-center justify-center gap-2"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-5 h-5"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" />
+            <polyline points="16 6 12 2 8 6" />
+            <line x1="12" y1="2" x2="12" y2="15" />
+          </svg>
+          Derivar
+        </a>
+      </div>
+    </div>
+    }
+  </div>
+</div>

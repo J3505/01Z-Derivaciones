@@ -16,10 +16,12 @@ export const routes: Routes = [
   },
   {
     path: 'profesor',
+    loadComponent: () => import('./layout/profesor/layout-profesor/layout-profesor.component'),
     children: PROFESOR_ROUTES,
   },
   {
     path: 'tutor',
+    loadComponent: () => import('./layout/tutor/layout-tutor/layout-tutor.component'),
     children: TUTOR_ROUTES,
   },
   { path: '**', redirectTo: 'login' },

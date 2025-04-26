@@ -7,6 +7,10 @@ export const TUTOR_ROUTES: Routes = [
     loadComponent: () => import('../tutor/inicio/inicio.component'),
   },
   {
+    path: 'ver-derivaciones',
+    loadComponent: () => import ('../tutor/ver-derivaciones/ver-derivaciones.component'),
+  },
+  {
     path: 'historial',
     loadComponent: () => import ('../tutor/historial/historial.component'),
   }

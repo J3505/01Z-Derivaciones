@@ -1,0 +1,223 @@
+<div class="p-2"></div>
+<div class="flex-1 space-y-8 py- p-4 md:p-8 lg:p-12 xl:p-16">
+    <!-- Back Button -->
+    <div class="mb-6">
+        <a href="#" class="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors">
+            <i data-lucide="arrow-left" class="w-5 h-5 mr-2"></i>
+            Volver a la lista de derivaciones
+        </a>
+    </div>
+
+    <!-- Derivation Detail Card -->
+    <div class="bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden fade-in">
+        <!-- Header -->
+        <div class="bg-gradient-to-r from-blue-50 to-blue-100 px-6 py-4 border-b border-blue-200">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                <div>
+                    <h1 class="text-2xl font-bold text-gray-800">Detalle de Derivación</h1>
+                    <div class="flex items-center mt-2">
+                        <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs font-medium mr-3">
+                            Pendiente
+                        </span>
+                        <span class="text-sm text-gray-600">
+                            <i data-lucide="calendar" class="w-4 h-4 inline mr-1"></i>
+                            Creada: 15/05/2025
+                        </span>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <button class="flex items-center px-4 py-2 bg-white border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition-colors">
+                        <i data-lucide="printer" class="w-4 h-4 mr-2"></i>
+                        Imprimir
+                    </button>
+                    <button class="flex items-center px-4 py-2 bg-white border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition-colors">
+                        <i data-lucide="share-2" class="w-4 h-4 mr-2"></i>
+                        Compartir
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="p-6">
+            <!-- Student Info -->
+            <div class="mb-8 p-4 bg-gray-50 rounded-lg border border-gray-200">
+                <h3 class="text-lg font-semibold text-gray-700 mb-3 flex items-center">
+                    <i data-lucide="user" class="w-5 h-5 mr-2 text-blue-600"></i>
+                    Información del Estudiante
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div>
+                        <p class="text-sm text-gray-500">Nombre completo</p>
+                        <p class="font-medium">Juan Pérez González</p>
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-500">ID</p>
+                        <p class="font-medium">1506196</p>
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-500">Curso</p>
+                        <p class="font-medium">Aplicativos moviles</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Derivation Details -->
+            <div class="mb-8">
+                <h3 class="text-lg font-semibold text-gray-700 mb-3 flex items-center">
+                    <i data-lucide="file-text" class="w-5 h-5 mr-2 text-blue-600"></i>
+                    Detalles de la Derivación
+                </h3>
+                <div class="space-y-4">
+                    <div>
+                        <p class="text-sm text-gray-500">Tipo de derivación</p>
+                        <p class="font-medium">Asistencia</p>
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-500">Profesor que deriva</p>
+                        <p class="font-medium">María José Fernández</p>
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-500">Motivo</p>
+                        <p class="font-medium">El estudiante no asistió a clases en lo que va del curso</p>
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-500">Descripción</p>
+                        <p class="text-gray-700 mt-1">
+                            El estudiante Juan Pérez ha faltado a clases durante las últimas 3 semanas sin justificación. 
+                            Según los registros, ha faltado 8 de los últimos 15 días hábiles. Los apoderados no han respondido 
+                            a los llamados ni a las comunicaciones enviadas. Se solicita intervención del equipo de convivencia escolar.
+                        </p>
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-500">Adjuntos</p>
+                        <div class="flex items-center mt-2">
+                            <div class="flex items-center px-3 py-2 bg-gray-100 rounded-lg mr-3">
+                                <i data-lucide="file" class="w-4 h-4 mr-2 text-gray-600"></i>
+                                <span class="text-sm font-medium">registro_asistencia.pdf</span>
+                            </div>
+                            <div class="flex items-center px-3 py-2 bg-gray-100 rounded-lg">
+                                <i data-lucide="file" class="w-4 h-4 mr-2 text-gray-600"></i>
+                                <span class="text-sm font-medium">comunicaciones.docx</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Response Section -->
+            <div class="mb-8">
+                <h3 class="text-lg font-semibold text-gray-700 mb-3 flex items-center">
+                    <i data-lucide="message-square" class="w-5 h-5 mr-2 text-blue-600"></i>
+                    Responder Derivación
+                </h3>
+                <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                    <form>
+                        <div class="mb-4">
+                            <label for="response-type" class="block text-sm font-medium text-gray-700 mb-1">Tipo de respuesta</label>
+                            <select id="response-type" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                                <option value="solution">Solución propuesta</option>
+                                <option value="observation">Observación</option>
+                                <option value="follow-up">Requiere seguimiento</option>
+                                <option value="other">Otro</option>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <label for="response" class="block text-sm font-medium text-gray-700 mb-1">Respuesta detallada</label>
+                            <textarea id="response" rows="5" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="Escribe aquí tu respuesta detallada..."></textarea>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Adjuntar archivos</label>
+                            <div class="flex items-center justify-center w-full">
+                                <label for="dropzone-file" class="flex flex-col items-center justify-center w-full h-32 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100 transition-colors">
+                                    <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                                        <i data-lucide="upload" class="w-8 h-8 mb-3 text-gray-400"></i>
+                                        <p class="mb-2 text-sm text-gray-500"><span class="font-semibold">Click para subir</span> o arrastra archivos</p>
+                                        <p class="text-xs text-gray-500">PDF, DOCX, JPG (MAX. 5MB)</p>
+                                    </div>
+                                    <input id="dropzone-file" type="file" class="hidden" multiple />
+                                </label>
+                            </div> 
+                        </div>
+                        <div class="flex justify-end space-x-3">
+                            <button type="button" class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors">
+                                Cancelar
+                            </button>
+                            <button type="submit" class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center">
+                                <i data-lucide="send" class="w-4 h-4 mr-2"></i>
+                                Enviar respuesta
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- History Section -->
+            <div>
+                <h3 class="text-lg font-semibold text-gray-700 mb-3 flex items-center">
+                    <i data-lucide="clock" class="w-5 h-5 mr-2 text-blue-600"></i>
+                    Historial de la Derivación
+                </h3>
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <div class="overflow-y-auto max-h-96 custom-scrollbar">
+                        <div class="divide-y divide-gray-200">
+                            <!-- Creation Event -->
+                            <div class="p-4 hover:bg-gray-50 transition-colors">
+                                <div class="flex">
+                                    <div class="flex-shrink-0 mr-3">
+                                        <div class="flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 text-blue-600">
+                                            <i data-lucide="plus" class="w-4 h-4"></i>
+                                        </div>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="flex items-center justify-between">
+                                            <p class="text-sm font-medium text-gray-900">Derivación creada</p>
+                                            <p class="text-xs text-gray-500">15/05/2025 10:30</p>
+                                        </div>
+                                        <p class="text-sm text-gray-600 mt-1">Por: María José Fernández</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Assignment Event -->
+                            <div class="p-4 hover:bg-gray-50 transition-colors">
+                                <div class="flex">
+                                    <div class="flex-shrink-0 mr-3">
+                                        <div class="flex items-center justify-center w-8 h-8 rounded-full bg-purple-100 text-purple-600">
+                                            <i data-lucide="user-plus" class="w-4 h-4"></i>
+                                        </div>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="flex items-center justify-between">
+                                            <p class="text-sm font-medium text-gray-900">Asignada a ti</p>
+                                            <p class="text-xs text-gray-500">16/05/2025 08:45</p>
+                                        </div>
+                                        <p class="text-sm text-gray-600 mt-1">Por: Coordinación de Convivencia Escolar</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- View Event -->
+                            <div class="p-4 hover:bg-gray-50 transition-colors">
+                                <div class="flex">
+                                    <div class="flex-shrink-0 mr-3">
+                                        <div class="flex items-center justify-center w-8 h-8 rounded-full bg-gray-100 text-gray-600">
+                                            <i data-lucide="eye" class="w-4 h-4"></i>
+                                        </div>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="flex items-center justify-between">
+                                            <p class="text-sm font-medium text-gray-900">Vista por primera vez</p>
+                                            <p class="text-xs text-gray-500">16/05/2025 14:20</p>
+                                        </div>
+                                        <p class="text-sm text-gray-600 mt-1">Tú viste esta derivación</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
