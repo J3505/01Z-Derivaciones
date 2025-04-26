@@ -1,49 +1,22 @@
-.boton1,
-.boton2 {
-    width: 200px;
-    height: 44px;
-    border: none;
-    border-radius: 8px;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    padding: 10px 0;
-  }
-
-.boton3{
-    width: 150px;
-    height: 44px;
-    border: none;
-    border-radius: 8px;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    padding: 10px 0;
-    position: relative;
-    top: 30px;
-    
+.hover-scale {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-
-  .boton1 {
-    background: rgb(20, 194, 20);
-  }
-  
-  .boton1:hover {
-    background: rgb(75, 219, 75);
-  }
-  
-  .boton2 {
-    background: rgb(45, 42, 221);
-  }
-  
-  .boton2:hover {
-    background: rgb(57, 55, 226);
-  }
-
-  .boton3 {
-    background: rgb(45, 42, 221);
-  }
-  
-  .boton3:hover {
-    background: rgb(57, 55, 226);
-  }
+.hover-scale:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.modal {
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.status-pending {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+.status-reviewed {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+.status-urgent {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
