@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { EstudiantesService } from '../../core/services/estudiantes.service';
 import { Estudiante } from '../../core/model/estudiante.model';
+import { DataService } from '../../core/services/data.service';
 
 @Component({
   selector: 'app-estudiantes',
@@ -14,6 +15,8 @@ import { Estudiante } from '../../core/model/estudiante.model';
   styleUrl: './estudiantes.component.scss',
 })
 export default class EstudiantesComponent implements OnInit {
+
+
   visible: boolean = false;
   estudiantes: Estudiante[] = [];
   isModalOpen: boolean = false;
@@ -40,37 +43,37 @@ export default class EstudiantesComponent implements OnInit {
     this.visible = true;
   }
 
-  constructor(private readonly estudianteService: EstudiantesService) {}
+  constructor(private readonly data: DataService) {}
 
   ngOnInit() {
     this.loadEstudiantes();
   }
 
   loadEstudiantes() {
-    this.estudianteService.getEstudiantes().subscribe((data) => {
+    this.data.getEstudiantes().subscribe((data) => {
       this.estudiantes = data;
     });
   }
 
-  saveEstudiante(estudiante: Estudiante) {
-    this.estudianteService.addEstudiante(estudiante).subscribe(() => {
-      this.loadEstudiantes();
+  // saveEstudiante(estudiante: Estudiante) {
+  //   this.data.addEstudiante(estudiante).subscribe(() => {
+  //     this.loadEstudiantes();
 
-      this.nuevoEstudiante = {
-        foto: 'https://res.cloudinary.com/dsadfgmfn/image/upload/v1745129247/descarga_cqtwkw.jpg',
-        nombre: '',
-        apellido: '',
-        telefono: '',
-        correo: '',
-        cfp: '',
-        semestre: '',
-        carrera: '',
-        curso: '',
-        periodo: '',
-      };
-      this.visible = false;
-    });
-  }
+  //     this.nuevoEstudiante = {
+  //       foto: 'https://res.cloudinary.com/dsadfgmfn/image/upload/v1745129247/descarga_cqtwkw.jpg',
+  //       nombre: '',
+  //       apellido: '',
+  //       telefono: '',
+  //       correo: '',
+  //       cfp: '',
+  //       semestre: '',
+  //       carrera: '',
+  //       curso: '',
+  //       periodo: '',
+  //     };
+  //     this.visible = false;
+  //   });
+  // }
 
   openModal() {
     this.isModalOpen = true;

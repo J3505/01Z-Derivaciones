@@ -1,0 +1,136 @@
+[
+   {
+      "id": 1234561,
+      "nombre": "María",
+      "apellido": "Gómez",
+      "curso": "Seminario",
+      "telefono": "987 654 321",
+      "correo": "maria.gomez@gmail.com",
+      "carrera": "nose",
+      "semestre": "V",
+      "periodo": "2025-10",
+      "cfp": "Ayacucho",
+      "foto": "https://randomuser.me/api/portraits/women/1.jpg"
+   },
+   {
+      "id": 1234562,
+      "nombre": "Sofía",
+      "apellido": "Vargas",
+      "curso": "Seminario",
+      "telefono": "987 654 322",
+      "correo": "maria.gomez@gmail.com",
+      "carrera": "nose",
+      "semestre": "V",
+      "periodo": "2025-10",
+      "cfp": "Ayacucho",
+      "foto": "https://randomuser.me/api/portraits/women/2.jpg"
+   },
+   {
+      "id": 1234563,
+      "nombre": "Maria",
+      "apellido": "Castro",
+      "curso": "Seminario",
+      "telefono": "987 654 323",
+      "correo": "maria.gomez@gmail.com",
+      "carrera": "nose",
+      "semestre": "V",
+      "periodo": "2025-10",
+      "cfp": "Ayacucho",
+      "foto": "https://randomuser.me/api/portraits/women/15.jpg"
+   },
+   {
+      "id": 123454,
+      "nombre": "María",
+      "apellido": "Zevallos",
+      "curso": "Seminario",
+      "telefono": "987 654 324",
+      "correo": "maria.gomez@gmail.com",
+      "carrera": "nose",
+      "semestre": "V",
+      "periodo": "2025-10",
+      "cfp": "Ayacucho",
+      "foto": "https://randomuser.me/api/portraits/women/4.jpg"
+   },
+   {
+      "id": 1234565,
+      "nombre": "Miriam",
+      "apellido": "Matines",
+      "curso": "Seminario",
+      "telefono": "987 654 325",
+      "correo": "maria.gomez@gmail.com",
+      "carrera": "nose",
+      "semestre": "V",
+      "periodo": "2025-10",
+      "cfp": "Ayacucho",
+      "foto": "https://randomuser.me/api/portraits/women/5.jpg"
+   },
+   {
+      "id": 1234565,
+      "nombre": "Lia",
+      "apellido": "Salcedo",
+      "curso": "Seminario",
+      "telefono": "987 654 321",
+      "correo": "maria.gomez@gmail.com",
+      "carrera": "nose",
+      "semestre": "V",
+      "periodo": "2025-10",
+      "cfp": "Ayacucho",
+      "foto": "https://randomuser.me/api/portraits/women/6.jpg"
+   },
+   {
+      "id": 1234567,
+      "nombre": "Nicol",
+      "apellido": "Quispe",
+      "curso": "Seminario",
+      "telefono": "987 654 326",
+      "correo": "maria.gomez@gmail.com",
+      "carrera": "nose",
+      "semestre": "V",
+      "periodo": "2025-10",
+      "cfp": "Ayacucho",
+      "foto": "https://randomuser.me/api/portraits/women/7.jpg"
+   },
+   {
+      "id": 1234568,
+      "nombre": "Valentina",
+      "apellido": "Flores",
+      "curso": "Seminario",
+      "telefono": "987 654 327",
+      "correo": "maria.gomez@gmail.com",
+      "carrera": "nose",
+      "semestre": "V",
+      "periodo": "2025-10",
+      "cfp": "Ayacucho",
+      "foto": "https://randomuser.me/api/portraits/women/8.jpg"
+   },
+
+   {
+      "id": 1234569,
+      "nombre": "Ana",
+      "apellido": "Ramos",
+      "curso": "Seminario",
+      "telefono": "987 654 328",
+      "correo": "maria.gomez@gmail.com",
+      "carrera": "nose",
+      "semestre": "V",
+      "periodo": "2025-10",
+      "cfp": "Ayacucho",
+      "foto": "https://randomuser.me/api/portraits/women/9.jpg"
+   },
+   {
+      "id": 1234560,
+      "nombre": "Luciana",
+      "apellido": "Mendoza",
+      "curso": "Seminario",
+      "telefono": "987 654 329",
+      "correo": "maria.gomez@gmail.com",
+      "carrera": "nose",
+      "semestre": "V",
+      "periodo": "2025-10",
+      "cfp": "Ayacucho",
+      "foto": "https://randomuser.me/api/portraits/women/10.jpg"
+   }
+]
+
+
+

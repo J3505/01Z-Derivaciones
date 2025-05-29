@@ -1,12 +1,15 @@
+
+
 export interface Estudiante {
-  foto: string;
+  // id: number;
   nombre: string;
   apellido: string;
+  curso: string;
   telefono: string;
   correo: string;
-  cfp: string;
-  semestre: string;
-  carrera: string;
-  curso: string;
-  periodo: string;
+  carrera?: string;
+  semestre?: string;
+  periodo?: string;
+  cfp?: string;
+  foto?:string;
 }
