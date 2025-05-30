@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HistorialDerivacionService } from '../../service/historial-derivacion.service';
-import { NgClass } from '@angular/common';
+
 
 export type Historial = {
   id: number,
@@ -13,7 +13,7 @@ export type Historial = {
 
 @Component({
   selector: 'app-dashboard',
-  imports: [NgClass],
+  imports: [],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss',
   providers:[HistorialDerivacionService]
