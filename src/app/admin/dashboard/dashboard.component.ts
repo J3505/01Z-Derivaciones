@@ -1,11 +1,31 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { HistorialDerivacionService } from '../../service/historial-derivacion.service';
+import { NgClass } from '@angular/common';
+
+export type Historial = {
+  id: number,
+  title: string,
+  motivo: string,
+  answer: string,
+  derivator: string,
+  time: string
+}
 
 @Component({
   selector: 'app-dashboard',
-  imports: [],
+  imports: [NgClass],
   templateUrl: './dashboard.component.html',
-  styleUrl: './dashboard.component.scss'
+  styleUrl: './dashboard.component.scss',
+  providers:[HistorialDerivacionService]
 })
-export default class DashboardComponent {
+export default class DashboardComponent implements OnInit{
 
+  historial?:Historial[];
+
+  constructor(private readonly historialService:HistorialDerivacionService){}
+
+  async ngOnInit(){
+    console.log('...ngOnInit')
+    this.historial = await this.historialService.getHistorial();
+  }
 }

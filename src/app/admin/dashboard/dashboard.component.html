@@ -83,56 +83,20 @@
             </div>
   
             <div class="space-y-4">
+                @for(item of historial; track item.id){
                 <div class="flex items-start space-x-4 p-3 hover:bg-blue-50 rounded-lg transition">
                     <div class="p-2 bg-blue-100 text-blue-600 rounded-lg">
                         <i class="fa-solid fa-notes-medical"></i>
                     </div>
                     <div class="flex-1">
-                        <p class="font-medium">Derivación a Bienestar Estudiantil</p>
-                        <p class="text-sm text-gray-500">Motivo: Problemas de asistencia recurrentes y bajo rendimiento académico en las últimas semanas.</p>
-                        <p class="text-sm text-gray-500">Respuesta del tutor: Ese estudiante es malisimo saquenlo de ahi XD</p>
-                        <p class="text-xs text-gray-400 mt-1">Hace 15 minutos</p>
+                        <p class="font-medium">{{item.title}}</p>
+                        <p class="text-sm text-gray-500">Motivo: {{item.motivo}}</p>
+                        <p class="text-sm text-gray-500">Respuesta del tutor: {{item.answer}}</p>
+                        <p class="text-xs text-gray-400 mt-1">{{item.time}}</p>
                     </div>
-                    <span class="text-sm font-medium text-blue-600">Derivado por: Anonimo</span>
+                    <span class="text-sm font-medium text-blue-600">Derivado por: {{item.derivator}}</span>
                 </div>
-  
-                <div class="flex items-start space-x-4 p-3 hover:bg-blue-50 rounded-lg transition">
-                    <div class="p-2 bg-blue-100 text-blue-600 rounded-lg">
-                        <i class="fas fa-user-plus"></i>
-                    </div>
-                    <div class="flex-1">
-                        <p class="font-medium">Derivación a Orientación Vocacional</p>
-                        <p class="text-sm text-gray-500">Motivo: Dudas sobre continuidad en la carrera y posibles cambios de programa.</p>
-                        <p class="text-sm text-gray-500">Respuesta del tutor: Que hace pensando la taradupida esa que se cambie de una vez</p>
-                        <p class="text-xs text-gray-400 mt-1">Hace 1 hora</p>
-                    </div>
-                    <span class="text-sm font-medium text-blue-600">Derivado por: Anonimo</span>
-                </div>
-  
-                <div class="flex items-start space-x-4 p-3 hover:bg-blue-50 rounded-lg transition">
-                    <div class="p-2 bg-green-100 text-green-600 rounded-lg">
-                        <i class="fas fa-check-circle"></i>
-                    </div>
-                    <div class="flex-1">
-                        <p class="font-medium">Derivación a Asuntos Académicos</p>
-                        <p class="text-sm text-gray-500">Motivo: Solicitud de revisión de situación académica por problemas familiares que afectan rendimiento.</p>
-                        <p class="text-sm text-gray-500">Respuesta del tutor: 5mentarios</p>
-                        <p class="text-xs text-gray-400 mt-1">Hace 3 horas</p>
-                    </div>
-                    <span class="text-sm font-medium text-blue-600">Derivado por: Anonimo</span>
-                </div>
-  <!--
-                <div class="flex items-start space-x-4 p-3 hover:bg-blue-50 rounded-lg transition">
-                    <div class="p-2 bg-purple-100 text-purple-600 rounded-lg">
-                        <i class="fas fa-comment"></i>
-                    </div>
-                    <div class="flex-1">
-                        <p class="font-medium">Nuevo comentario</p>
-                        <p class="text-sm text-gray-500">Ana López dejó un comentario en "Diseño UX/UI"</p>
-                        <p class="text-xs text-gray-400 mt-1">Hace 5 horas</p>
-                    </div>
-                </div>
-                -->
+            }
             </div>
         </div>
   

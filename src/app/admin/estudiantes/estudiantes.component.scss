@@ -1,5 +1,6 @@
 .boton1,
-.boton2 {
+.boton2,
+.boton{
     width: 200px;
     height: 44px;
     border: none;
@@ -28,4 +29,12 @@
   
   .boton2:hover {
     background: rgb(236, 60, 60);
+  }
+
+  #boton{
+    background: rgb(10, 226, 10);
+    position: relative;
+  }
+  #boton:hover{
+    background: rgb(27, 247, 27);
   }
