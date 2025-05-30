@@ -13,7 +13,7 @@ export type Estudiante = {
 
 @Component({
   selector: 'app-estudiantes',
-  imports: [NgClass],
+  imports: [],
   templateUrl: './estudiantes.component.html',
   styleUrl: './estudiantes.component.scss',
   providers:[ListaEstudiantesService]
